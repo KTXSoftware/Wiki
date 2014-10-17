@@ -1,0 +1,6 @@
+# Getting Started With Kore
+#Getting started with Kore
+Git (a versioning system), Node.js (scripting tool used by the included build tool) and a C++ IDE (Visual Studio for Windows, Code::Blocks for Linux, XCode for OSX) should be installed to use Kore.
+To get started, git clone a Kore project recursively: git clone --recursive https://github.com/ktxsoftware/Exercise1.git.
+Building a Kore project works in two steps:
+First the integrated build system koremake is called using Node.js - cd to your project directory and execute "node Kore/make". This creates an IDE project in the build subdirectory. Open it up and run the project in your IDE. At that point you can work in your IDE like usual. However when you add additional source files you eventually need to modify korefile.js, which defines which files are added to a project by koremake.
