@@ -1,6 +1,6 @@
 # Home
-## Game Technology
-### Lecture
+## Lectures
+### Game Technology
 #### Theory Script
 1. [Input and Output](inputoutput)
 
@@ -13,5 +13,9 @@
 ### Exercises
 [Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf)
 
-## Kore
+## Software
+### Kore
 [[Getting Started with Kore]]
+
+### Git
+[[Getting Started with Git]]
