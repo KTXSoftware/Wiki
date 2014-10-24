@@ -3,7 +3,7 @@
 ### Game Technology
 #### Theory Script
 1. [Input and Output](inputoutput)
-2. [[The Main Loop]]
+2. [[The Game Loop]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
