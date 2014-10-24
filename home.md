@@ -13,7 +13,7 @@
 
 ### Exercises
 [Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf)
-[Exercise 2](http://ktxsoftware.com/gametech-ex2.pdf)
+[Exercise 2](http://ktxsoftware.com/gametech-ex2.pdf) (Beware - updated at 24.10., 15:14 to correct an error in 2.2)
 
 ## Software
 ### Kore
