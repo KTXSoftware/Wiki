@@ -1,4 +1,4 @@
-# Addition C++ Specifics
+# Additional C++ Specifics
 ### Operator Overloading
 C++ supports operator overloading, which is done using special, reserved function names.
 ```cpp
