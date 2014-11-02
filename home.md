@@ -9,6 +9,7 @@
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
 2. [[Memory Management]]
+3. [[Addition C++ Specifics]]
 
 #### Presentations
 1. [(pptx)](http://ktxsoftware.com/gametech1.pptx) [(pdf)](http://ktxsoftware.com/gametech1.pdf)
