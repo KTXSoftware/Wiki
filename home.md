@@ -4,6 +4,7 @@
 #### Theory Script
 1. [Input and Output](inputoutput)
 2. [[The Game Loop]]
+3. [[Software Rendering]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
