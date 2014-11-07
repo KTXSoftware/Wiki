@@ -21,6 +21,7 @@
 [Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf)
 [Exercise 2](http://ktxsoftware.com/gametech-ex2.pdf) (Beware - updated at 24.10., 15:14 to correct an error in 2.2)
 [Exercise 3](http://ktxsoftware.com/gametech-ex3.pdf)
+[Exercise 4](http://ktxsoftware.com/gametech-ex4.pdf)
 
 ## Software
 ### Kore
