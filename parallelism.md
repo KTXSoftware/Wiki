@@ -1,6 +1,7 @@
 # Parallelism
 Today’s CPUs support executing code in parallel in three distinctive ways. The C/C++ standards traditionally lack behind in providing standardized support, making most of it unnecessary difficult.
-Superscalar computations
+
+### Superscalar computations
 Easy for the programmer but most difficult for any computer modern CPUs try to automatically parallelize code by identifying sequential but independent calculations.
 ```cpp
 c = a + b
@@ -9,7 +10,8 @@ c = a + b
 d = a + c // cannot be parallelized
 ```
 Compilers can optimize code for superscalar execution by interweaving independent calculations. Optimizations for superscalar execution are rarely done manually but it is useful to be aware of the feature if only to understand the output of a profiler which might report more than one calculation per clock due to automatically parallelized execution.
-SIMD Instructions
+
+### SIMD Instructions
 Explicit parallel computation instruction apply basic arithmetic to multiple values at once. Most typically SIMD instructions work on four 32 bit floating point values. This is especially useful for vector and matrix math as it is used frequently in 3D games.
 x86 CPUs support floating point SIMD instructions since 1999 using the SSE instruction set extensions. The first implementations worked on 128 bit registers, supporting four 32 bit floating point values. Newer extensions (AVX) support 256 bit registers. On most 64 bit operating systems SSE instructions are used exclusively for floating point calculations in 64 bit applications, abandoning the older FPU instructions.
 ARM CPUs support a similar instruction set extension called NEON, which is optionally supported starting with Cortex-A8 CPUs.
@@ -24,7 +26,7 @@ float allAdded = added.m128_f32[0] + added.m128_f32[1]
 ```
 SSE or NEON code is generally portable across compilers but SSE and NEON code is incompatible.
 
-###Multithreading
+### Multithreading
 Multithreading is directly supported in C and C++ since 2011. As operating systems started supporting (preemptive) multithreading before 2011 every operating system provides a distinct set of APIs. Professional games traditionally avoided multithreading until it became necessary to use all resources provided by multicore CPUs. Multi CPU game systems have been around since the 80s but have always been rare exceptions. But now just about every CPU includes multiple CPU cores.
 Preemptive (aka real) multithreading runs multiple execution threads completely independent but in the same address space. Using the shared address space the same data can trivially be used from multiple threads, but working on the same data can lead to lots of very hard to debug problems – most notably race conditions.
 Changing the same value from different threads can work out nicely.
