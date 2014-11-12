@@ -23,25 +23,25 @@ with α being the relative position (from 0 to 1) between the interpolated verti
 The previous chapter showed how to calculate a camera view by calculating the rotations of the camera around the x, y and z-axis, the so called Euler angles, independently and one after another. Euler angle calculations depend on calculation order – rotating around x and then around y will yield different values than rotating around y first. Handling this correctly is not intuitive and when the calculation order is not chosen wisely one rotation axis can be rotated into one of the other two axis, which cancels out one degree of freedom. This situation is called the Gimbal Lock.
 ![Gimbal Lock](http://ktxsoftware.com/gimballock.png)
 The rotation calculation around a single axis derived in the previous chapter by reevaluating coordinates in a new, rotated coordinate system.
-[coord system]
+![Rotated Coordinate System](http://ktxsoftware.com/rotatedcoords.png)
 This resulted in the formula
-[R(x,y,a)]
+![rxya](http://ktxsoftware.com/rxya.png)
 which is an example of matrix multiplication, typically written as
-[matrix]
+![Matrix calculation](http://ktxsoftware.com/matrixcalc.png)
 
 ### Rotation matrices
 According to Euler’s rotation theorem any rotation or sequence of rotations of a rigid body or coordinate system about a fixed point is equivalent to a single rotation by a given angle θ about a fixed axis (called Euler axis) that runs through the fixed point. This basically defines a new coordinate system and can thus be integrated into a matrix which results in the formula
-[big matrix]
+![Rotation Matrix](http://ktxsoftware.com/rotationmatrix.png)
 with u being the unit vector and Θ the rotation angle. This rotation matrix is a much bigger construct than three Euler angles, but it does not suffer from Gimbal Lock.
 
 ### Transformation matrices
 Matrix transformations can not only represent rotations but most kinds of affine transformations, which are all transforms which preserve straight lines like scaling, shearing and rotations. Matrices however have to be extended to also support translations.
-[translation]
+![Translation Matrix](http://ktxsoftware.com/translation.png)
 Adding an additional column to the transformation matrix and an additional line to the vector matrix makes it possible to represent translations. And adding an additional line to the transformation matrix makes it possible to support projective transformations. Creating a matrix like
-[projection]
+![Projection Matrix](http://ktxsoftware.com/projection.png)
 will divide every coordinate with its z component – the perspective division.
 Overall this results in the following matrix structure:
-[matrix]
+![Transformation Matrix](http://ktxsoftware.com/transformation.png)
 Matrices can be multiplied themselves with the results representing the combined transformations executed one after another. This makes using matrix multiplications a very useful technique for 3D graphics as large sequences of transformations can be precalculated and represented in a single 4x4 matrix.
 The four component vectors shown in the translation and perspective transformations are a more general mathematical concept called homogenous coordinates which is used in projected coordinate systems. The four component vector is mapped to a 3D position by dividing x, y and z components with w – the fourth component. The other way round a homogenous coordinate is created by adding a w component of 1 to a 3D position. Direction vectors are represented by adding a w component of 0.
 
