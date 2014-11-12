@@ -31,7 +31,7 @@ y = vertex.y - camera.y
 z = vertex.z - camera.z
 ```
 Rotations can be best understood by rotating a coordinate system and calculating the positions in the new coordinate system.
-[rotations picture]
+![Rotated Coordinate System](http://ktxsoftware.com/rotatedcoords.png)
 The rotated positions can be calculated by multiplying the original positions with the axes vectors of the coordinate system.
 (x,y) = x(1,0) + y(0,1)
 For a rotated coordinate system this results in:
@@ -42,7 +42,7 @@ R(x,y,α) = x(cos α, sin α) + y(-sin α, cos α)
 ```
 A camera in 3D space can be rotated around three axes, which can be handled by rotating around each axis one after another.
 The last step, the perspective projection is surprisingly easy.
-[projection picture]
+![Projection](http://ktxsoftware.com/perspectiveeye.png)
 The picture shows a typical system of lenses like a camera or an eye. Comparing the triangles one can assess that
 ```
 h1 / a1 = h2 / (a1 + a2)
