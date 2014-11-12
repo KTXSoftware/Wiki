@@ -47,25 +47,22 @@ The four component vectors shown in the translation and perspective transformati
 
 ### Quaternions
 One important problem remains in handling rotations – rotations cannot be interpolated efficiently using Euler angles or rotation matrices. For that reason games widely adopted Quaternions for rotation calculations. A quaternion is a four dimensional imaginary number consisting of one real and three imaginary components which can represent a rotation around a vector u with an angle of Θ according to:
-[quaternion rotation]
-A point can be rotated using:
-[quat rot]
-Representing a quaternion using w as the real component and v as the vector of imaginary components multiplication is done according to:
-[quat mult]
+![Quaternion Rotation](http://ktxsoftware.com/quatrot.png)
+A point can be rotated using: rotated point = q * point * q^-1
+Representing a quaternion using w as the real component and v as the vector of imaginary components multiplication is done according to: q1*q2 = (w1w2 - v1 · v2, v1 x v2 + w1v2 + w2v1)
 Quaternion multiplication is not commutative aka q1 * q2 != q2 * q1.
-The inverse of a quaternion is:
-[quat inv]
+The inverse of a quaternion is: (w, -v) / (w² + x² + y² + z²)
 The all-important quaternion rotation interpolation is implemented by
-[slerp]
+![slerp](http://ktxsoftware.com/slerp.png)
 with
-[cosquat]
+![cosquat](http://ktxsoftware.com/tau.png)
 This is a proper spherical linear interpolation meaning that when the rotations are mapped to a sphere, the interpolation will find the shortest path between the two mapped points on the sphere.
 A quaternion can be represented as a matrix, making it practical to include quaternion calculations in a regular, matrix based transformation pipeline:
-[quatmatrix]
+![quatmatrix](http://ktxsoftware.com/quatmat.png)
 
 ### Lighting
 When all the basics of a 3D renderer are working the next obvious step is to add lighting. 3D meshes are mostly exported including normal data – the orientation of vertices which is then interpolated across the triangles to calculate the orientation for each pixel. Vertices are eventually duplicated before being imported into a 3D renderer to retain sharp edges where lighting information should not be interpolated. A popular example of that is a cube.
-[cube]
+![Cube](http://ktxsoftware.com/cube.png)
 Calculating the dot product between the transformed normal and the direction to a light source yields a nice looking diffuse lighting.
-[light]
+![Light](http://ktxsoftware.com/light.png)
 Light most mesh surface calculations local lighting can be calculated per pixel (interpolating the normal between vertices) or per vertex (directly using the normal and then interpolating the resulting colors between vertices). Per pixel calculations are generally more exact and nicer looking but also slower.
