@@ -14,14 +14,14 @@ For every pixel the depth test checks for the smallest z value that was previous
 
 ### Perspective Correction
 The combination of regularly interpolated texture coordinates and perspective projection creates skewed looking images and visible seems between triangles.
-[weird textures]
+![Weird Textures](http://ktxsoftware.com/weirdtextures.jpg)
 Regular linear interpolation is not sufficient in a perspective coordinate system. For a correct visual appearance, the coordinate divided by the depth value has to be interpolated to linearly shrink the texture according to the projected depth. The modified interpolation equation is
-[perspective]
+![Perspective correction](http://ktxsoftware.com/perspective.png)
 with α being the relative position (from 0 to 1) between the interpolated vertices.
 
 ### Rotations
 The previous chapter showed how to calculate a camera view by calculating the rotations of the camera around the x, y and z-axis, the so called Euler angles, independently and one after another. Euler angle calculations depend on calculation order – rotating around x and then around y will yield different values than rotating around y first. Handling this correctly is not intuitive and when the calculation order is not chosen wisely one rotation axis can be rotated into one of the other two axis, which cancels out one degree of freedom. This situation is called the Gimbal Lock.
-[gimbal lock]
+![Gimbal Lock](http://ktxsoftware.com/gimballock.png)
 The rotation calculation around a single axis derived in the previous chapter by reevaluating coordinates in a new, rotated coordinate system.
 [coord system]
 This resulted in the formula
