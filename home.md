@@ -18,6 +18,7 @@
 2. [(pptx)](http://ktxsoftware.com/gametech2.pptx) [(pdf)](http://ktxsoftware.com/gametech2.pdf)
 3. [(pptx)](http://ktxsoftware.com/gametech3.pptx) [(pdf)](http://ktxsoftware.com/gametech3.pdf)
 4. [(pptx)](http://ktxsoftware.com/gametech4.pptx) [(pdf)](http://ktxsoftware.com/gametech4.pdf)
+5. [(pptx)](http://ktxsoftware.com/gametech5.pptx) [(pdf)](http://ktxsoftware.com/gametech5.pdf)
 
 ### Exercises
 [Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf)
