@@ -21,8 +21,8 @@
 5. [(pptx)](http://ktxsoftware.com/gametech5.pptx) [(pdf)](http://ktxsoftware.com/gametech5.pdf)
 
 ### Exercises
-[Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf)
-[Exercise 2](http://ktxsoftware.com/gametech-ex2.pdf) (Beware - updated at 24.10., 15:14 to correct an error in 2.2)
+[Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf) - [Solution](http://ktxsoftware.com/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
+[Exercise 2](http://ktxsoftware.com/gametech-ex2.pdf) (Beware - updated at 24.10., 15:14 to correct an error in 2.2) - [Solution](http://ktxsoftware.com/gametech-ex2_solution.pdf)
 [Exercise 3](http://ktxsoftware.com/gametech-ex3.pdf)
 [Exercise 4](http://ktxsoftware.com/gametech-ex4.pdf)
 [Exercise 5](http://ktxsoftware.com/gametech-ex5.pdf)
