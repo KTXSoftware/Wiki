@@ -1,4 +1,3 @@
-# Memory Management
 The primary distinction to programming languages which are more commonly used at universities (aka Java) is manual memory management. Much has been said about the implications to reliability and speed. Avoiding the hazards that lead to memory management related bugs gets easier with experience but once the bugs have arrived they can be very hard to find. But memory management is a primary reason that C++ code can run faster than Java code. It is also the reason why some C++ code runs slower than Java code. Generally programming languages try to handle three somewhat distinct memory areas:
 ### Static memory
 This is where global variables go. It is allocated when the application starts and cannot be manually deallocated. It is rarely problematic, as long as allocating massive amounts of static memory can be avoided.
