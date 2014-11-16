@@ -13,11 +13,11 @@
 4. [[Parallelism]]
 
 #### Presentations
-1. [(pptx)](http://ktxsoftware.com/gametech1.pptx) [(pdf)](http://ktxsoftware.com/gametech1.pdf)
-2. [(pptx)](http://ktxsoftware.com/gametech2.pptx) [(pdf)](http://ktxsoftware.com/gametech2.pdf)
-3. [(pptx)](http://ktxsoftware.com/gametech3.pptx) [(pdf)](http://ktxsoftware.com/gametech3.pdf)
-4. [(pptx)](http://ktxsoftware.com/gametech4.pptx) [(pdf)](http://ktxsoftware.com/gametech4.pdf)
-5. [(pptx)](http://ktxsoftware.com/gametech5.pptx) [(pdf)](http://ktxsoftware.com/gametech5.pdf)
+1. [(pptx)](/wiki/slides/gametech1.pptx) [(pdf)](/wiki/slides/gametech1.pdf)
+2. [(pptx)](/wiki/slides/gametech2.pptx) [(pdf)](/wiki/slides/gametech2.pdf)
+3. [(pptx)](/wiki/slides/gametech3.pptx) [(pdf)](/wiki/slides/gametech3.pdf)
+4. [(pptx)](/wiki/slides/gametech4.pptx) [(pdf)](/wiki/slides/gametech4.pdf)
+5. [(pptx)](/wiki/slides/gametech5.pptx) [(pdf)](/wiki/slides/gametech5.pdf)
 
 ### Exercises
 [Exercise 1](http://ktxsoftware.com/gametech-ex1.pdf) - [Solution](http://ktxsoftware.com/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
