@@ -1,5 +1,5 @@
 Software rendering for 2D graphics can be a simple affair, implemented just by copying sections of preloaded images to the framebuffer. So called spritesheets contains the individual frames of animated objects. Tilesets contains the building blocks of static surroundings.
-![2D Rendering](http://ktxsoftware.com/sml.png)
+![2D Rendering](/wiki/images/sml.png)
 ### Font Rendering
 Font rendering is a similar process using images that contain individual letters and can be used the same way as a tileset. But font rendering can also be considerably more advanced. Fonts as used in today’s operating systems (TrueType fonts) are defined by line segments and Bezier curves and contain lots of additional data like kerning data (for letter combination specific positioning) and hinting information for pixel snapping (shifting font positions slightly to better align with the pixel grid). Additionally, modern font renderers consider the positions of the rgb subpixels of the monitor to increase horizontal rendering resolution. All of those additional details are costly, especially for game renderers which are optimized to rerender everything every frame. Games usually end up prerendering modern fonts to images to use traditional and fast image-based font rendering at runtime.
 
@@ -30,7 +30,7 @@ y = vertex.y - camera.y
 z = vertex.z - camera.z
 ```
 Rotations can be best understood by rotating a coordinate system and calculating the positions in the new coordinate system.
-![Rotated Coordinate System](http://ktxsoftware.com/rotatedcoords.png)
+![Rotated Coordinate System](/wiki/images/rotatedcoords.png)
 The rotated positions can be calculated by multiplying the original positions with the axes vectors of the coordinate system.
 (x,y) = x(1,0) + y(0,1)
 For a rotated coordinate system this results in:
@@ -41,7 +41,7 @@ R(x,y,α) = x(cos α, sin α) + y(-sin α, cos α)
 ```
 A camera in 3D space can be rotated around three axes, which can be handled by rotating around each axis one after another.
 The last step, the perspective projection is surprisingly easy.
-![Projection](http://ktxsoftware.com/perspectiveeye.png)
+![Projection](/wiki/images/perspectiveeye.png)
 The picture shows a typical system of lenses like a camera or an eye. Comparing the triangles one can assess that
 ```
 h1 / a1 = h2 / (a1 + a2)
@@ -68,17 +68,17 @@ float d3z = d2z;
 Xp = (zmin / d3z) * d3x + screenWidth / 2
 ```
 When the coordinates are transformed, the individual points can be connected using a line drawing algorithm like DDA or Bresenham. Early 3D games used line drawing exclusively, although those games originally didn’t use any line drawing algorithms but instead used so called vector displays.
-![Line Drawing](http://ktxsoftware.com/battlezone.png)
+![Line Drawing](/wiki/images/battlezone.png)
 Later 3D games as well as today’s 3D games used not only lines but mainly triangles or quads. Today’s hardware is optimized for triangle drawing though in the mid-90s some hardware was optimized for quad drawing. After the tree points defining a triangle have been transformed the triangle can be drawn using the new points. This is a 2D operation, the z coordinate can be ignored at that point. Triangles can be drawn line by line, using a so-called scanline algorithm. To draw a triangle, find the longest edge on the monitor’s y axis. Iterate over y and fill all lines between the long edge and one of the other edges. Repeat with the long edge and the remaining edge.
-![A Triangle](http://ktxsoftware.com/tri.png)
+![A Triangle](/wiki/images/tri.png)
 That is sufficient for drawing triangles, but drawing an actual mesh will show depth sorting problems – some triangles from the backside of the object will show up on top of other triangles. A first step to help with depth sorting and also increase performance is backface culling, removing any triangles that do not face the camera. A fast backface culling procedure is to require mesh data to contain triangles with constant winding and calculate winding after transformation using a cross product of two of the triangle sides. The resulting, perpendicular vector will show to or from the camera depending on its winding.
-![Winding](http://ktxsoftware.com/winding.png)
+![Winding](/wiki/images/winding.png)
 As mentioned before, 3D graphics became big, when images were applied to the somewhat dull looking triangles. The process is essentially the same as for scaled and rotated 2D graphics. Mesh data is accompanied by additional image coordinates which are numbers between zero and one describing what part of the image is to be applied to the triangle corner. During triangle rasterisation those image coordinates are interpolated and corresponding image values are sampled.
-![UV Coordinates](http://ktxsoftware.com/uv.png)
+![UV Coordinates](/wiki/images/uv.png)
 Depth can also be handled in the same way it’s done in 2D games – drawing complete objects from farthest to nearest. In combination with backface culling scenes consisting of simple 3D objects can be drawn correctly. This however cannot properly handle object intersections and more complex 3D objects which contain overlapping layers (for example an ear on a head).
 ### Culling
 To further enhance performance, games try to only draw objects that are actually visible. This is especially important for a software renderer. An easy and generally useful optimization is frustum culling, which tests every object against the view frustum. The view frustum as defined by the screen boundaries, a minimal z value and eventually a maximum z value consists of six planes. An object which is on the back of all of those planes is out of view.
-![Frustum Culling](http://ktxsoftware.com/culling.png)
+![Frustum Culling](/wiki/images/culling.png)
 More complex object culling algorithms include building recursive scene structures like octrees or more game specific algorithms as applied in the Quake series, which’s levels are defined by rooms which are connected by windows. Every frame the game checks all windows of the current room and then renders the current room and all visible neighbor rooms.
 However as CPUs become ever speedier and memory accesses become costlier it becomes more effective for many games to just iterate over an array of every object instead of using some form of hierarchical object tree.
 It can also be beneficial to do more involved calculations to figure out which objects are inside the view frustum but completely occluded by other objects. But this can get be very complex and depends largely on the typical level structure of a specific game whether such algorithms are beneficial. For static objects visibility data can be precalculated, for more dynamic games, scenes can be rasterizing using a low complexity version of the game world to check for visibility before the actual high quality rendering. Modern graphics chips support occlusion queries, to help out with this process – however this requires expensive CPU<->GPU communication for which reason actual CPU rasterisation can be a useful alternative.
