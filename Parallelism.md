@@ -1,4 +1,3 @@
-# Parallelism
 Today’s CPUs support executing code in parallel in three distinctive ways. The C/C++ standards traditionally lack behind in providing standardized support, making most of it unnecessary difficult.
 
 ### Superscalar computations
