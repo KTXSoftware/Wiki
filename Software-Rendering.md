@@ -1,4 +1,3 @@
-# Software Rendering
 Software rendering for 2D graphics can be a simple affair, implemented just by copying sections of preloaded images to the framebuffer. So called spritesheets contains the individual frames of animated objects. Tilesets contains the building blocks of static surroundings.
 ![2D Rendering](http://ktxsoftware.com/sml.png)
 ### Font Rendering
