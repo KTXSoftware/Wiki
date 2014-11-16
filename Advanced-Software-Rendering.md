@@ -1,4 +1,3 @@
-# Advanced Software Rendering
 The previous forays into software rendering left three major graphical glitches unresolved.
 
 ### Depth Buffer
