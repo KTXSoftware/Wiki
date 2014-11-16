@@ -1,4 +1,3 @@
-# Home
 ## Lectures
 ### Game Technology
 #### Theory Script
