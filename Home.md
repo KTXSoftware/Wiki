@@ -5,6 +5,7 @@
 2. [[The Game Loop]]
 3. [[Software Rendering]]
 4. [[Advanced Software Rendering]]
+5. [[Basic Hardware Rendering]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
