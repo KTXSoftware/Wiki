@@ -12,6 +12,7 @@
 2. [[Memory Management]]
 3. [[Additional C++ Specifics]]
 4. [[Parallelism]]
+5. [[GLSL]]
 
 #### Presentations
 1. [(pptx)](/wiki/slides/gametech1.pptx) [(pdf)](/wiki/slides/gametech1.pdf)
