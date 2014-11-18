@@ -52,7 +52,7 @@ color = ambient + diffuse + specular
 ![Phong](/wiki/images/phong.png)
 This calculates a single color value for one position on a 3D mesh for a single light. For multiple lights the resulting color values are added up.
 The ambient term in the Phong lighting model is just a constant for a combination of material and light (typically "light color" · "material ambient") which is supposed to represent ambient, indirect lighting.
-[ambient]
+![Ambient](/wiki/images/ambient.jpg)
 Diffuse represents light which penetrates the material, is scattered just a little big and then leaves in a random direction.
 [diffuse]
 The diffuse equation in the Phong lighting model is the same equation introduced for lighting in the previous chapter:
