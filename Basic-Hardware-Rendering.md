@@ -54,32 +54,33 @@ This calculates a single color value for one position on a 3D mesh for a single 
 The ambient term in the Phong lighting model is just a constant for a combination of material and light (typically "light color" · "material ambient") which is supposed to represent ambient, indirect lighting.
 ![Ambient](/wiki/images/ambient.jpg)
 Diffuse represents light which penetrates the material, is scattered just a little big and then leaves in a random direction.
-[diffuse]
+![Diffuse Reflection](/wiki/images/diffuse.png)
 The diffuse equation in the Phong lighting model is the same equation introduced for lighting in the previous chapter:
 diffuse = L · N
 or when incorporating light and material values:
 diffuse = "light color" · "material diffuse" · L · N
 which is actually a rather realistic model for diffuse light reflections.
 The specular factor represents direct reflections.
-[specular]
+![Mirror](/wiki/images/specular.jpg)
 Obviously direct reflections cannot be represented properly without incorporating the complete surroundings. As the only scene objects the Phong lighting model is concerned with are direct light sources its specular term can only be a very crude approximation. The equation is as follows:
-[spec eq]
+![Specular](/wiki/images/specularequation.png)
 with R being the mirrored vector to the light source (the reflectance vector) and V being the vector to the camera. n represents roughness with 32 being a typical value.
 A slightly faster and eventually nicer looking equation is the Blinn Phong model for specular reflections:
-[blinn phong]
+![Blinn Phong 1](/wiki/images/blinnphong1.png)
+![Blinn Phong 2](/wiki/images/blinnphong2.png)
 Blinn Phong works with a half vector between the vector to the light and the vector to the camera.
-[vectors]
+![Light Vectors](/wiki/images/lightvectors.png)
 Both models basically calculate a small, direct reflection of the light source. This makes sense because when watching a reflection direct light sources (like for example the sun) are very dominant. Still it’s very far from realistic.
 
 ### More realistic lighting
 Ambient lighting is an approximation of light bouncing around in the scene. Calculating bouncing light is easy to implement but correct implementations are computationally very expensive and thus not possible in realtime. But ambient lighting does not introduce hard borders in an image, instead it’s all just soft gradients. Bilinear filtering works nicely for soft gradients and as such it is possible to precompute proper ambient lighting and to put it in small textures which are then bilinearly filtered.
 Precomputed ambient lighting very much defined the look of early 3D games like Quake and is still widely used today.
-[quake]
+![Quake](/wiki/images/quake.png)
 Specular lighting sadly cannot be precomputed as easily. Direct reflections are dependent on the camera position. For some objects in a game it can however make sense to compute the view of the surroundings from the object’s position, encoding the images in a so called cube map. A cube map is a texture which includes six images, each for one axial direction (up, down, left,…). A cube map is indexed using a direction vector – which can be the reflection vector to calculate a nice reflection approximation. Calculating six additional views just for rendering a single object is of course overly expensive and should be reduced to one or two visible objects – like for example the player’s car in a racing game.
 
 ### Shadows
 All those lighting models are just approximations of light bouncing around. What happens during the first bounces is typically more dominant and dynamic in a final picture and thus more resources are spend for early bounces. Direct lighting calculates the very first light bounce. Ambient lighting calculates many bounces and is therefore a candidate for static, low-resolution precalculations. Calculating two bounces produces a very well-known lighting effect: shadows.
 Shadows are usually calculated by rendering shadow maps. To create a shadow map the current scene is rendered from the light source’s position. But instead of rendering color values, the depth values are copied to the resulting texture. During regular rendering the vertex shader calculates in addition to the regular positions the positions as seen by the light. In the fragment shader the shadow map is read at the resulting x and y light position and compared to the newly computed light depth positions – a smaller value in the shadow map means that the currently rendered position is further away from the light than the what the light rendered at that x and y positions and is consequently in the shadow.
-[shadow mapping]
+![Shadow Mapping](/wiki/images/shadowmapping.png)
 Shadow maps easily run into precision problems. Reducing precision problems in shadow maps is a current research topic but a widely used method is to use multiple shadow maps for different distances from the camera. Those are called cascaded shadow maps.
-[cascaded shadow maps]
+![Cascaded Shadow Maps](/wiki/images/cascadedshadowmapping.png)
