@@ -25,15 +25,15 @@ The depth buffer algorithm is implemented as part of the rasterizer and thus can
 Transparency or alpha blending as it is usually called is a stressful procedure for any graphics chip. Incorporating previous color values stresses the memory interface and makes parallelization of calculations more difficult, because earlier triangle calculations must be completely finished before pixels can be blended. For those reasons alpha blending is still not a programmable process on most chips (modern chips which use deferred rendering, like the PowerVR chips used in iOS devices are an exception). Instead alpha blending is configured using a set of predefined options which specify how the old and new pixels are combined.
 Regular alpha blending does not support more involved effects like rendering bumpy glass surfaces which deform the visual appearance of everything behind them. Such effects can be implemented by rendering a scene to a texture and in a second pass rendering the transparent material using the rendered texture as an input. But rendering that way should be absolutely minimized as it is very slow – rendering to the texture is a hard synchronization point because every triangle has to be finished before the texture can be used.
 The standard blending mode used for rendering is
-source alpha * new pixel + (1 - source alpha) * old pixel
+source alpha · new pixel + (1 - source alpha) · old pixel
 which directly mixes the old and new pixel values according to the alpha value. Another useful blending mode is additive blending:
-source alpha * new pixel + old pixel
+source alpha · new pixel + old pixel
 This adds the new color on top of the old pixels.
 ![Sunglasses](/wiki/images/sunglasses.jpg)
 The sunglasses demonstrate a combined use of standard and additive blending. The sunglasses darken the eyes and skin behind the glasses – a typical use case for standard blending. The reflections on the sunglasses on the other hand require additive blending as the reflected light indeed adds light to the scene. Sadly though blending modes can’t just combine standard and additive blending like that.
 Blending is also problematic in combination with bilinearly interpolated textures which include alpha values. Interpolating can incorporate color values of texels which have an alpha value of 0. Those color values actually make no sense and produce black or white edges in the rendered images.
 ![Trees](/wiki/images/trees.jpg)
-A simple image preprocess can fix both problems. Source alpha * new pixel can be precomputed, replacing the original color channel. Calculating source alpha * new pixel before texel interpolations fixes the black/white borders of semi-transparent textures. Invisible texel colors are multiplied with 0 first and then added for interpolation instead of being interpolated and then added.
+A simple image preprocess can fix both problems. Source alpha · new pixel can be precomputed, replacing the original color channel. Calculating source alpha · new pixel before texel interpolations fixes the black/white borders of semi-transparent textures. Invisible texel colors are multiplied with 0 first and then added for interpolation instead of being interpolated and then added.
 Modifying the color values further by adding some color value after premultiplying the alpha values makes it possible to combine additive blending – the added color will then be added during blending.
 
 ### Shader
@@ -51,14 +51,14 @@ Programmable shader stages are most prominently used to implement local lighting
 color = ambient + diffuse + specular
 ![Phong](/wiki/images/phong.png)
 This calculates a single color value for one position on a 3D mesh for a single light. For multiple lights the resulting color values are added up.
-The ambient term in the Phong lighting model is just a constant for a combination of material and light (typically "light color" * "material ambient") which is supposed to represent ambient, indirect lighting.
+The ambient term in the Phong lighting model is just a constant for a combination of material and light (typically "light color" · "material ambient") which is supposed to represent ambient, indirect lighting.
 [ambient]
 Diffuse represents light which penetrates the material, is scattered just a little big and then leaves in a random direction.
 [diffuse]
 The diffuse equation in the Phong lighting model is the same equation introduced for lighting in the previous chapter:
-diffuse = L * N
+diffuse = L · N
 or when incorporating light and material values:
-diffuse = “light color” * “material diffuse” * L * N
+diffuse = "light color" · "material diffuse" · L · N
 which is actually a rather realistic model for diffuse light reflections.
 The specular factor represents direct reflections.
 [specular]
