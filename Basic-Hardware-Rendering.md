@@ -3,19 +3,19 @@ Today’s GPUs are massively parallel chips that can do hundreds of calculations
 
 ### Triangles
 Triangles as created by GPUs look jaggy with default settings.
-[jaggy triangle]
+![Jaggy Triangle](/wiki/images/jaggytriangle.png)
 This happens when only one point per pixel is sampled to render a triangle. Low sampling frequencies also lead aliasing artifacts aka a loss of information – when a triangle is about as thin or thinner as the distance between two samples it can disappear depending on its exact position.
 Calculating more than one sample per pixel is called Supersample Antialiasing in gaming jargon. It’s an effective and simple but also resource hungry technique. Modern graphics chips support an alternative technique called Multisample Antialiasing which only calculates additional samples at triangle edges. Efficiency then depends highly on typical triangle sizes.
-[supersample image]
+![Supersampling](/wiki/images/supersampling.png)
 Anti-Aliasing generally also helps smoothing jaggy triangle edges but recently more and more games employ algorithms which only help smoothing triangle edges but do not fight any actual form of aliasing. After the image is rendered edge detection filters are applied to smooth hard edges. Those algorithms are usually called anti-aliasing, too, although that is not technically correct. Other more current algorithms try to remap previously calculated frames into the current frame, then blend them together in a procedure called temporal anti-aliasing. This works best with slow moving cameras because remapping a 2D frame to a new 3D position is not a perfectly reliable process. Temporal anti-aliasing can however remove actual aliasing.
 Older graphics chips could also directly rasterize properly anti-aliased triangles. But this process, called Edge Anti-Aliasing, produces semi-transparent pixel values and accordingly triangles would have to be sorted for correct visuals and the process does not work for overlapping triangles.
 
 ### Textures
 Textures are basically images. Sometimes though textures consist of multiple images. Some graphics chips or graphics apis (like WebGL) prefer or only support texture widths and heights of 2^n, but it’s always possible to put an image that does not fit this constraint in a larger texture and modify texture coordinates accordingly.
 GPUs can fetch texture data by either just getting the pixel nearest to the supplied texture coordinate or by interpolating the four surrounding pixels, which is called point and bilinear filtering, respectively. Most 3D games always use bilinear filtering which leads to the typical smeary textures which can be found in almost any 3D game.
-[mario64]
+![Mario 64](/wiki/images/mario64.jpg)
 Bilinear filtering can be very useful when textures are scaled up, but it does not help much when textures are scaled down. When a large texture is drawn across a very small triangle ideally for every drawn pixel a large amount of texture pixels (called texels) would have to be interpolated – in the extreme case when a complete texture is mapped to a single pixel that pixel should have the mean value of all texels. Sampling textures like that however is not feasible in realtime rendering. Instead scaled down textures are precalculated, typically at (width/2, height/2), (width/4, height/4), and so on. Those are called mip maps and graphics apis can treat a complete mip map chain like as a single texture. When rendered the best fitting mip map level is chosen for texel sampling. To avoid artifacts at mip level boundaries, which are very clearly visible during movement along prespectively stretched walls, mip maps can be sampled using trilinear filtering, sampling and interpolating from two mip levels for every pixel. Trilinear filtering though also doesn’t work perfectly with perspective, because perspective projections tend to scale to different sizes in x and y directions, making it impossible to choose optimal mip levels. This results in images which are either smeary (aka scaled up from a smaller mip level) or grainy (suboptimally scaled down from a bigger mip level).
-[aniso]
+![Anisotropic Filtering](/wiki/images/anisotropicfiltering.png)
 Graphic chips support an anisotropic texture filtering mode to avoid these artifacts, which incorporates more samples when textures are stretched unevenly in x and y. How good anisotropic filtering actually works is usually effected by user level options in the graphics driver menus, at least on Windows.
 
 ### Depth Buffer
@@ -29,10 +29,10 @@ source alpha * new pixel + (1 - source alpha) * old pixel
 which directly mixes the old and new pixel values according to the alpha value. Another useful blending mode is additive blending:
 source alpha * new pixel + old pixel
 This adds the new color on top of the old pixels.
-[sunglasses]
+![Sunglasses](/wiki/images/sunglasses.jpg)
 The sunglasses demonstrate a combined use of standard and additive blending. The sunglasses darken the eyes and skin behind the glasses – a typical use case for standard blending. The reflections on the sunglasses on the other hand require additive blending as the reflected light indeed adds light to the scene. Sadly though blending modes can’t just combine standard and additive blending like that.
 Blending is also problematic in combination with bilinearly interpolated textures which include alpha values. Interpolating can incorporate color values of texels which have an alpha value of 0. Those color values actually make no sense and produce black or white edges in the rendered images.
-[trees]
+![Trees](/wiki/images/trees.jpg)
 A simple image preprocess can fix both problems. Source alpha * new pixel can be precomputed, replacing the original color channel. Calculating source alpha * new pixel before texel interpolations fixes the black/white borders of semi-transparent textures. Invisible texel colors are multiplied with 0 first and then added for interpolation instead of being interpolated and then added.
 Modifying the color values further by adding some color value after premultiplying the alpha values makes it possible to combine additive blending – the added color will then be added during blending.
 
@@ -49,9 +49,9 @@ Additionally some graphics apis support compute shaders, which forego the usual 
 ### Lighting
 Programmable shader stages are most prominently used to implement local lighting equations – which is the origin of the name “shader”. The big classic of local lighting equations which is still relevant today is the Phong lighting model. The basic equation is
 color = ambient + diffuse + specular
-[phong]
+![Phong](/wiki/images/phong.png)
 This calculates a single color value for one position on a 3D mesh for a single light. For multiple lights the resulting color values are added up.
-The ambient term in the Phong lighting model is just a constant for a combination of material and light (typically “light color” * “material ambient”) which is supposed to represent ambient, indirect lighting.
+The ambient term in the Phong lighting model is just a constant for a combination of material and light (typically "light color" * "material ambient") which is supposed to represent ambient, indirect lighting.
 [ambient]
 Diffuse represents light which penetrates the material, is scattered just a little big and then leaves in a random direction.
 [diffuse]
