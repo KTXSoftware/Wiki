@@ -1,5 +1,5 @@
 Modern CPU cores use a decreasing amount of their transistor count for actual instruction based computations. As more and more ALUs (arithmetic logic units) are added it becomes increasingly difficult to keep these units busy based on a single thread of instructions. Pipelined execution is the norm since many years which divides every instruction in simple, discrete steps to increase parallelism because the first step of the following instruction can be executed while the previous instruction’s second step is worked on. 
-[pipelined]
+![CPU Pipeline](/wiki/images/pipelined.png)
 Pipelined execution, especially when combined with multiple ALUs, can lead to three basic kinds of hazards which slow down execution.
 
 ### Structural Hazards
