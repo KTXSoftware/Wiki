@@ -22,7 +22,8 @@
 3. [(pptx)](/wiki/slides/gametech3.pptx) [(pdf)](/wiki/slides/gametech3.pdf)
 4. [(pptx)](/wiki/slides/gametech4.pptx) [(pdf)](/wiki/slides/gametech4.pdf)
 5. [(pptx)](/wiki/slides/gametech5.pptx) [(pdf)](/wiki/slides/gametech5.pdf)
-5. [(pptx)](/wiki/slides/gametech6.pptx) [(pdf)](/wiki/slides/gametech6.pdf)
+6. [(pptx)](/wiki/slides/gametech6.pptx) [(pdf)](/wiki/slides/gametech6.pdf)
+7. [(pptx)](/wiki/slides/gametech7.pptx) [(pdf)](/wiki/slides/gametech7.pdf)
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
@@ -31,6 +32,7 @@
 [Exercise 4](/wiki/exercises/gametech-ex4.pdf)
 [Exercise 5](/wiki/exercises/gametech-ex5.pdf)
 [Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Video](/wiki/exercises/exercise6.mp4)
+[Exercise 7](/wiki/exercises/gametech-ex7.pdf)
 
 ## Software
 ### Kore
