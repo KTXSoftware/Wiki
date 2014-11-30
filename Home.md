@@ -32,7 +32,7 @@
 [Exercise 4](/wiki/exercises/gametech-ex4.pdf)
 [Exercise 5](/wiki/exercises/gametech-ex5.pdf)
 [Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Video](/wiki/exercises/exercise6.mp4)
-[Exercise 7](/wiki/exercises/gametech-ex7.pdf)
+[Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Images](Exercise-7-Images)
 
 ## Software
 ### Kore
