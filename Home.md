@@ -16,6 +16,7 @@
 4. [[Parallelism]]
 5. [[GLSL]]
 6. [[CPU Internals]]
+7. [[GPU Internals]]
 
 #### Presentations
 1. [(pptx)](/wiki/slides/gametech1.pptx) [(pdf)](/wiki/slides/gametech1.pdf)
