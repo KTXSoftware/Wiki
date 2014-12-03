@@ -7,6 +7,7 @@
 4. [[Advanced Software Rendering]]
 5. [[Basic Hardware Rendering]]
 6. [[Bumps and Animations]]
+7. [[Physically Based Rendering]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
