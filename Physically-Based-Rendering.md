@@ -15,7 +15,7 @@ The standard BRDF definition assumes that the result is multiplied with the cosi
 A BRDF should never return negative values.
 ![Invertable](/wiki/images/brdfinvert.png)
 When the light and camera vector are swapped, a BRDF should return the same value. This is in accordance to light ray calculations in physics like direct reflection or refraction.
-![Energy Conserving](/wiki/imagesbrdfenergyconservation.png)
+![Energy Conserving](/wiki/images/brdfenergyconservation.png)
 BRDFs are called energy conserving when they do not emit more light than they receive at any given point.
 For all of that it is important to avoid calculating using gamma encoded color values. As monitors mostly work with a gamma value of 2.2 and images are saved using an inverted gamma value of 1 / 2.2 so they can be displayed properly on a monitor without further modifications, rendering algorithms can work in a linear color space by taking image color values to a power of 2.2 and taking calculated color values to a power of 1 / 2.2 before writing them to the framebuffer.
 The Phong lighting model is a proper BRDF (at least when the ambient term is removed). Its diffuse term (L⋅N) is generally close enough to more physically accurate BRDFs that games tend to retain it. But that is not the case for the specular term.
