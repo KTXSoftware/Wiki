@@ -30,12 +30,12 @@
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
-[Exercise 2](/wiki/exercises/gametech-ex2.pdf) (Beware - updated at 24.10., 15:14 to correct an error in 2.2) - [Solution](/wiki/exercises/gametech-ex2_solution.pdf)
+[Exercise 2](/wiki/exercises/gametech-ex2.pdf) - [Solution](/wiki/exercises/gametech-ex2_solution.pdf)
 [Exercise 3](/wiki/exercises/gametech-ex3.pdf)
 [Exercise 4](/wiki/exercises/gametech-ex4.pdf)
 [Exercise 5](/wiki/exercises/gametech-ex5.pdf)
-[Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Video](/wiki/exercises/exercise6.mp4)
-[Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Images](Exercise-7-Images)
+[Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Video](/wiki/exercises/exercise6.mp4) - [Programming Solution](https://github.com/KTXSoftware/Exercise6-Solution.git)
+[Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Images](Exercise-7-Images) - [Programming Solution](https://github.com/KTXSoftware/Exercise7-Solution.git)
 [Exercise 8](/wiki/exercises/gametech-ex8.pdf)
 
 ## Software
