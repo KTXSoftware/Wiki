@@ -36,7 +36,7 @@
 [Exercise 5](/wiki/exercises/gametech-ex5.pdf)
 [Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Video](/wiki/exercises/exercise6.mp4) - [Programming Solution](https://github.com/KTXSoftware/Exercise6-Solution.git)
 [Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Images](Exercise-7-Images) - [Programming Solution](https://github.com/KTXSoftware/Exercise7-Solution.git)
-[Exercise 8](/wiki/exercises/gametech-ex8.pdf)
+[Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Video](/wiki/exercises/exercise8.mp4)
 
 ## Software
 ### Kore
