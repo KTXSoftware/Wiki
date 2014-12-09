@@ -8,6 +8,7 @@
 5. [[Basic Hardware Rendering]]
 6. [[Bumps and Animations]]
 7. [[Physically Based Rendering]]
+8. Physics 1 - Coming 9.12.2014 - Sorry for the delay!
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
@@ -17,6 +18,7 @@
 5. [[GLSL]]
 6. [[CPU Internals]]
 7. [[GPU Internals]]
+
 
 #### Presentations
 1. [(pptx)](/wiki/slides/gametech1.pptx) [(pdf)](/wiki/slides/gametech1.pdf)
