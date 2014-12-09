@@ -8,7 +8,7 @@
 5. [[Basic Hardware Rendering]]
 6. [[Bumps and Animations]]
 7. [[Physically Based Rendering]]
-8. Physics 1 - Coming 9.12.2014 - Sorry for the delay!
+8. [[Physics1]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
