@@ -3,7 +3,7 @@
 ##Introduction and Motivation
 Physics have been a large and growing part of games for a long time. Starting from the first games like Asteroids, Pong or SpaceWar!, physical properties of objects and their movement have been simulated to make games more believable or enjoyable.
 
-In some cases, this has resulted in game concepts that would otherwise not have been possible. Applications like Bridge Builder (TODO: Link) require a physical simulation as it lies at the core of their gameplay to have it.
+In some cases, this has resulted in game concepts that would otherwise not have been possible. Applications like Bridge Builder (http://www.bridgebuilder.de/) require a physical simulation as it lies at the core of their gameplay to have it.
 
 In some cases, physical simulation can also help with the authoring or creation of the game. Instead of having an artist animate a physical object and its movement, this work can be carried out by a computer.
 
@@ -16,9 +16,8 @@ A complete discussion of the principles needed to build production-quality physi
 * Barrels, Boxes
 Scenery objects such as barrels or boxes that are part of many industrial or urban environments has become a trope in games. Their ubiquity is partly due to their small complexity. For collision detection, both cylinders (barrels) or boxes can be calculated very efficiently as compared to other convex polyhedra, and therefore are simpler to integrate into games than other objects.
 * Ragdolls
-Ragdolls refer to articulated bodies that are simulated by simulating the body as a chain of bones (see skinning in lecture XYZ) that have some constraints (they must not be separated - well, in most games that is..., and they should not move beyond the limits that normal human joints have). Previously, ragdolls used to be used only for unconcious or dead characters, as those characters have no movement (animation) of their own accord and are governed completely by external characters.
-
-Newer systems have broken up this requirement by mixing forward kinematics (animations) and inverse kinematics as well as ragdolls to create mixtures of ragdolls and animated characters. An example is XYZ, which was used in recent parts of Grand Theft Auto to simulate characters struggling to stand or being bumped into by other characters.
+Ragdolls refer to articulated bodies that are simulated by simulating the body as a chain of bones (see skinning in lecture 7 [[Bumps-and-Animations]]) that have some constraints (they must not be separated - well, in most games that is..., and they should not move beyond the limits that normal human joints have). Previously, ragdolls used to be used only for unconcious or dead characters, as those characters have no movement (animation) of their own accord and are governed completely by external characters.
+Newer systems have broken up this requirement by mixing forward kinematics (animations) and inverse kinematics as well as ragdolls to create mixtures of ragdolls and animated characters. An example is Euphoria (http://en.wikipedia.org/wiki/Euphoria_(software)), which was used in recent parts of Grand Theft Auto to simulate characters struggling to stand or being bumped into by other characters.
 * Soft bodies
 Few games simulate soft bodies, but support is starting to get better, especially with the movement of calculations of phyics being moved to General-Purpose GPU units (e.g. using CUDA or NVidia PhysX). This allows the simulation of objects such as cloth or hair.
 * Fluids, gasses
