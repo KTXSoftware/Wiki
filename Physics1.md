@@ -63,19 +63,19 @@ The simplest scheme for integration of the equations is the Euler integrator. Th
 
 From the equations, we know that force and acceleration are related via the mass of the object. We take the current acceleration to be the forces acting on the body divided by the mass of the body.
 
-a = F/m
+  a = F/m
 
 Using the acceleration, we can estimate the velocity by adding the acceleration to the previous velocity. We use the duration since the last calculation in this calcuation as deltaT:
 
-v_new = v_old + a * deltaT
+  v_new = v_old + a \* deltaT
 
 Finally, we reach the current position of the object by adding the velocity to the position in the previous frame, again, using deltaT:
 
-pos_new = pos_old + v_old * deltaT
+  pos_new = pos_old + v_old \* deltaT
 
-To make the whole system behave more realistically (objects have no simulated drag, and will never lose energy), we can add a dampening factor. This factor can be a constant in the range of 0 and 1, which we multiply onto our calculations to simulate energy being lost.
+To make the whole system behave more realistically (objects have no simulated drag, and will never lose energy), we can add a damping factor. This factor can be a constant in the range of 0 and 1, which we multiply onto our calculations to simulate energy being lost.
 
-pos_new = pos_old + v_old * deltaT * dampingFactor
+  v_new = v_old + a \* deltaT \* dampingFactor
 
 
 The Euler integrator works relatively well while we have no complicated forces acting on our bodies and especially while we have no collisions.
@@ -83,9 +83,9 @@ The Euler integrator works relatively well while we have no complicated forces a
 ### Integration step
 The individual step during one calculation for an object are:
 
-1. Calculate the new position by pos_new = pos_old + v_old * deltaT * dampingFactor;
+1. Calculate the new position by pos_new = pos_old + v_old \* deltaT
 2. Retrieve the sum of forces F from the accumulator and calculate a = F/m
-2. Calculate the new velocity by v_new = v_old + a * deltaT * dampingFactor;
+2. Calculate the new velocity by v_new = v_old + a \* deltaT \* dampingFactor
 4. Clear the accumulator (to allow new forces to be added in the next frame)
 
 
