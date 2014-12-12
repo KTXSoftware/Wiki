@@ -9,6 +9,7 @@
 6. [[Bumps and Animations]]
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
+9. [[Physics2]] - Coming 12.12.2014
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
@@ -29,6 +30,7 @@
 6. [(pptx)](/wiki/slides/gametech6.pptx) [(pdf)](/wiki/slides/gametech6.pdf)
 7. [(pptx)](/wiki/slides/gametech7.pptx) [(pdf)](/wiki/slides/gametech7.pdf)
 7. [(pptx)](/wiki/slides/gametech8.pptx) [(pdf)](/wiki/slides/gametech8.pdf)
+8. [(pptx)](/wiki/slides/gametech9.pptx) [(pdf)](/wiki/slides/gametech9.pdf)
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
@@ -39,6 +41,7 @@
 [Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Video](/wiki/exercises/exercise6.mp4) - [Programming Solution](https://github.com/KTXSoftware/Exercise6-Solution.git)
 [Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Images](Exercise-7-Images) - [Programming Solution](https://github.com/KTXSoftware/Exercise7-Solution.git)
 [Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Video](/wiki/exercises/exercise8.mp4)
+[Exercise 9](/wiki/exercises/gametech-ex9.pdf) - [Video](/wiki/exercises/exercise9.mp4) Coming 12.12.2014
 
 ## Software
 ### Kore
