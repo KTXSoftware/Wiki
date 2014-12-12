@@ -9,7 +9,7 @@
 6. [[Bumps and Animations]]
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
-9. [[Physics2]] - Coming 12.12.2014
+9. [[Physics2]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
