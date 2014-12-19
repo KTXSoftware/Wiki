@@ -10,6 +10,7 @@
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
 9. [[Physics2]]
+9. [[Procedural Content Generation]] Coming soon
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
@@ -19,6 +20,7 @@
 5. [[GLSL]]
 6. [[CPU Internals]]
 7. [[GPU Internals]]
+8. [[Virtual Classes]] Coming soon
 
 
 #### Presentations
@@ -31,6 +33,7 @@
 7. [(pptx)](/wiki/slides/gametech7.pptx) [(pdf)](/wiki/slides/gametech7.pdf)
 7. [(pptx)](/wiki/slides/gametech8.pptx) [(pdf)](/wiki/slides/gametech8.pdf)
 8. [(pptx)](/wiki/slides/gametech9.pptx) [(pdf)](/wiki/slides/gametech9.pdf)
+8. [(pptx)](/wiki/slides/gametech10.pptx) [(pdf)](/wiki/slides/gametech10.pdf)
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
@@ -42,6 +45,7 @@
 [Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Images](Exercise-7-Images) - [Programming Solution](https://github.com/KTXSoftware/Exercise7-Solution.git)
 [Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Video](/wiki/exercises/exercise8.mp4)
 [Exercise 9](/wiki/exercises/gametech-ex9.pdf) - [Video](/wiki/exercises/exercise9.mp4) - Update 13.12.: Please note the corrected position and size of the goal area's box
+[Exercise 10](/wiki/exercises/gametech-ex10.pdf) - For the reference examples, see the slides of the lecture
 
 ## Software
 ### Kore
