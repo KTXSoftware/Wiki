@@ -10,7 +10,7 @@
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
 9. [[Physics2]]
-9. [[Procedural Content Generation]] Coming soon
+9. [[Procedural Content Generation]] Coming 5.1.2015
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
@@ -20,7 +20,7 @@
 5. [[GLSL]]
 6. [[CPU Internals]]
 7. [[GPU Internals]]
-8. [[Virtual Classes]] Coming soon
+8. [[Virtual Classes]] Coming 6.1.2015
 
 
 #### Presentations
