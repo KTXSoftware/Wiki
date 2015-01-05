@@ -10,7 +10,7 @@
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
 9. [[Physics2]]
-9. [[Procedural Content Generation]] Coming 5.1.2015
+9. [[Procedural Content Generation]] 
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
