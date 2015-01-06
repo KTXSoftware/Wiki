@@ -20,7 +20,7 @@
 5. [[GLSL]]
 6. [[CPU Internals]]
 7. [[GPU Internals]]
-8. [[Virtual Classes]] Coming 6.1.2015
+8. [[Virtual Classes]]
 
 
 #### Presentations
