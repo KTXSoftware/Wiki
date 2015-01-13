@@ -1,5 +1,3 @@
-# Procedural Content Generation
-
 ##Introduction, Motivation
 With every new generation of games hardware, making games is becoming a larger undertaking. Early games in the console and home computer era quite often were designed and programmed by one person who was able to fulfill every position required. Compare this to current AAA games that require hundreds of team members including many artists responsible for creating the game world in all its details. On the other hand, many indie teams are small and have a very limited budget. This has led to a growing interest in the recent years in procedural content generation, an ever-growing collection of techniques for building game content in an efficient, (semi)-automatic way.
 
@@ -61,9 +59,9 @@ Constructive PCG algorithms are carried out once and then the created content is
 In mixed authorship, a player or designer takes the result of a PCG algorithm, refines it in some way or adds contraints that the PCG algorithm should take into consideration. After this, the PCG algorithm is run again, refining the existing content or adding new content that is based on the old. In this way, the designer and the PCG algorithm take turns in creating content.
 
 ### Teleological vs. Ontogenetic
-Broadly, PCG algorithms can also be divided into teleological and ontogenetic variants. Teleological (from telos - goal) refer to PCG algorithms that are based on the analysis of the result of the PCG algorithm and finding ways (by whatever means) to reach these goals. For example, generating terrain heights by using a random noise function does not have much to do with the real processes which form real mountains, but the end result looks convincing enough for humans.
+Broadly, PCG algorithms can also be divided into teleological and ontogenetic variants. Ontogenetic (ontos - being and geneia - mode of production) refers to PCG algorithms that are based on the analysis of the result of the PCG algorithm and finding ways (by whatever means) to reach these goals. For example, generating terrain heights by using a random noise function does not have much to do with the real processes which form real mountains, but the end result looks convincing enough for humans.
 
-On the other hand, ontogenetic approaches (ontos - being and geneia - mode of production) are inspired by the real processes which result in the things depicted by the PCG algorithm. An ontogenetic terrain generator might mimic the processes of tectonic movement to form rough mountains and the process of erosion for smoothing them. The end result will be more realistic and the approach might allow realistic animation of the stages that lead to the result, but will often also be less efficient than using the teleological approach.
+On the other hand, Teleological approaches (from telos - goal) are inspired by the real processes which result in the things depicted by the PCG algorithm. A teleological terrain generator might mimic the processes of tectonic movement to form rough mountains and the process of erosion for smoothing them. The end result will be more realistic and the approach might allow realistic animation of the stages that lead to the result, but will often also be less efficient than using the ontogenetic approach.
 
 
 
@@ -184,7 +182,7 @@ Pixel noise has, for many application areas, very disadvantageous properties. Th
 
 To address this challenge, noise functions have been proposed. Probably the best-known noise function is "Perlin noise", named after computer graphics researcher Ken Perlin.
 
-Perlin noise is a gradient noise. This means that we specify the gradient, or slope, of a function at certain points and interpolate in between these points. For a 1D Perlin noise function, we would specify a random slope at each integer point. At the same time, we define the function value to be 0 at these points. The interpolation is then done by taking the influence of the two closest integer points (e.g. 3 and 2 for 2.8) and calculate a value from those. We could just use the distance to the integer point as a weight factor for linear interpolation, however, Perlin suggests to use the fade function f(t) = 6t^5 – 15t^4 + 10t^3.
+Perlin noise is a gradient noise. This means that we specify the gradient, or slope, of a function at certain points and interpolate in between these points. For a 1D Perlin noise function, we would specify a random slope at each integer point. At the same time, we define the function value to be 0 at these points. The interpolation is then done by taking the influence of the two closest integer points (e.g. 3 and 2 for 2.8) and calculate a value from those. We could just use the distance to the integer point as a weight factor for linear interpolation, however, Perlin suggests to use the fade function f(t) = 6t^5 ï¿½ 15t^4 + 10t^3.
 
 In practice, the gradients will not be random each time, but instead be drawn from a set of gradients in a repeatable way. For this purpose, the algorithm uses a permutation table of the first n integer (e.g. 256) which is used to draw the gradient. 
 
@@ -206,5 +204,3 @@ L-Systems are grammars that define symbols that are replaced during the executio
 To account for the nondeterministic look of real vegetation, L-Systems can include probabilites which govern how symbols are replaced. This leads to differently looking trees being generated from the same start symbols.
 
 The resulting strings are usually transformed to 3D models using a turtle algorithm. The turtle follows the string's instructions and places 3D object elements such as branches or leaves as encoded in the string. This can also be used to save space in the game: The trees could be transmitted to the players' machines as strings which are then turned into tree models only when needed.
-
-
