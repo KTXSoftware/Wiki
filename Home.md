@@ -10,7 +10,7 @@
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
 9. [[Physics2]]
-9. [[Procedural Content Generation]] 
+10. [[Procedural Content Generation]] 
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
@@ -31,9 +31,9 @@
 5. [(pptx)](/wiki/slides/gametech5.pptx) [(pdf)](/wiki/slides/gametech5.pdf)
 6. [(pptx)](/wiki/slides/gametech6.pptx) [(pdf)](/wiki/slides/gametech6.pdf)
 7. [(pptx)](/wiki/slides/gametech7.pptx) [(pdf)](/wiki/slides/gametech7.pdf)
-7. [(pptx)](/wiki/slides/gametech8.pptx) [(pdf)](/wiki/slides/gametech8.pdf)
-8. [(pptx)](/wiki/slides/gametech9.pptx) [(pdf)](/wiki/slides/gametech9.pdf)
-8. [(pptx)](/wiki/slides/gametech10.pptx) [(pdf)](/wiki/slides/gametech10.pdf)
+8. [(pptx)](/wiki/slides/gametech8.pptx) [(pdf)](/wiki/slides/gametech8.pdf)
+9. [(pptx)](/wiki/slides/gametech9.pptx) [(pdf)](/wiki/slides/gametech9.pdf)
+10. [(pptx)](/wiki/slides/gametech10.pptx) [(pdf)](/wiki/slides/gametech10.pdf) - Update 15.01.: Corrected gradient lookup function on slide 54
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
