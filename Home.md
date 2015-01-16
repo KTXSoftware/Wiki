@@ -47,6 +47,7 @@
 [Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Video](/wiki/exercises/exercise8.mp4)
 [Exercise 9](/wiki/exercises/gametech-ex9.pdf) - [Video](/wiki/exercises/exercise9.mp4) - Update 13.12.: Please note the corrected position and size of the goal area's box
 [Exercise 10](/wiki/exercises/gametech-ex10.pdf) - For the reference examples, see the slides of the lecture | Update: The correct due date is the 16th of January
+[Exercise 11](/wiki/exercises/gametech-ex11.pdf)
 
 ## Software
 ### Kore
