@@ -34,7 +34,7 @@
 8. [(pptx)](/wiki/slides/gametech8.pptx) [(pdf)](/wiki/slides/gametech8.pdf)
 9. [(pptx)](/wiki/slides/gametech9.pptx) [(pdf)](/wiki/slides/gametech9.pdf)
 10. [(pptx)](/wiki/slides/gametech10.pptx) [(pdf)](/wiki/slides/gametech10.pdf) - Update 15.01.: Corrected gradient lookup function on slide 54
-11. [(pptx)](/wiki/slides/gametech11.pptx) [(pdf)](/wiki/slides/gametech11.pdf)
+11. [(pptx)](/wiki/slides/gametech11.pptx) [(pdf)](/wiki/slides/gametech11.pdf) - Update 16.01.: Now includes the slides about exercise 10
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
