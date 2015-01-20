@@ -1,7 +1,7 @@
 Games try to put big worlds into tiny computers. On first sight this doesn’t seem to be a problem – after all today’s usual 8 GiB of main memory could hold very SNES game ever created. But games like to use big images and even 8 GiB can easily be filled with just some big images. One 32 bit 4096x4096 texture alone takes up 64 MiB. Physically based rendering typically uses four textures – that’s 256 MiB for just one surface. One room has six sides – that‘s 1500 MiB of image data for just one room. Markus Persson’s house has 15 bathrooms…
 Killzone Shadow Fall’s data tables show a typical data layout of a modern game:
-[killzone cpu]
-[killzone gpu]
+![Killzone CPU Data](/wiki/images/killzone-cpu.png)
+![Killzone GPU Data](/wiki/images/killzone-gpu.png)
 
 ### Image compression
 Websites predominantly use the PNG and JPEG formats to compress their pictures. PNG is a lossless compression format which’s efficiency depends highly on the actual image content. JPEG is a lossy compression format that compresses everything strongly but can show strong artifacts for some image content – luckily JPEG mostly shows visible artifacts on image content which compresses nicely using PNG. But all of that is pretty much useless for games which are mainly concerned about cramming as much image data as possible in the video memory where it can be used for texturing. PNG and JPEG cannot be used in this situation because they don’t allow efficient access to individual pixels – PNGs and JPEGs have to be completely decompressed before any image calculations can be done on them.
@@ -13,31 +13,31 @@ But textures often do not contain plain image data. Depending on the concrete st
 
 ### Manual Image Compression
 The biggest compression ratios in games are mostly achieved by humans. A single image can be used over and over without anybody noticing when it’s done clever enough. 2D games very often use tilemaps which contain small images which are used to build the levels. A single tile is often repeated hundreds of times.
-[Mario tilemap]
+![Mario Tilemap](/wiki/images/sml.png)
 Artists and level designers typically use special tools to build tilemap based levels.
-[tile editor]
+![Tileset Editor](/wiki/images/tileeditor.png)
 Some games then additionally compressed the resulting dataset, dismissing some tiles which look very similar to each other. Pitfall – The Mayan Adventure, Donkey Kong Country and Ecco were some of those games. 3D games also occasionally use tilemaps but sadly bilinear filtering does not work well with tilemaps because at tile boundaries pixels would have to be blended between different tiles which are generally placed at different positions in the actual texture. Complex shaders could do that but can easily turn out too slow for realtime graphics.
-[Warcraft 3]
+![Warcraft 3](/wiki/images/warcraft3.png)
 Therefore most 3D games use different strategies to use images repeatedly. An easy trick is using a base texture and putting some smaller details on top at specific positions.
-[multitex]
+![Multitexturing](/wiki/images/multitex.png)
 Mostly seen for ground texturing two or more are repeated in small intervals but are blended into each other according to another small resolution blending texture.
-[skyrim]
+![Skyrim](/wiki/images/skyrim.png)
 Using a detail texture that just contains a small image of the material structure can also efficiently hide the pixelated structure of the primary texture.
-[serious sam]
+![Serious Sam](/wiki/images/serioussam.png)
 Good lighting work can also help tremendously to hide lacking texture detail. After all the real world is full of repeating patterns, too.
-[lightroom]
+![Room with Light](/wiki/images/lightroom.png)
 Using multiple textures however drains performance as it makes per pixel computations more expensive, but a preprocess which detects which textures are actually used on which triangles can minimize the performance penalty. Also the additional texturing data has to be provided by artists which have in turn to be provided with the proper tools to create the data.
 
 ### Image Streaming
 As games try to cram more and more images into memory more and more games stream image data in depending on the current viewport. Most games load complete images and replace them all at once (we will call that coarse streaming). This works similar to a level of details system – bigger images are loaded for close objects while bigger images for far away objects are kicked out of memory. More sophisticated keep both textures in memory for a short period of time and blend the new texture over the old texture to make detail changes less obvious.
 Streaming data should be loaded from an additional thread – disks are slow and unreliable and would introduce lots of stuttering if the rendering thread had to wait for loading operations to complete. Also the rendering thread should not be dependent on streaming data actually arriving. A disk read error can introduce delays of seconds aka hundreds of frames. Multithreaded and efficient texture updates are also problematic because graphics apis usually only work single threaded and often trigger implicit data conversions because they do not provide information about the actual data formats used by the hardware. This situation however seems to improve with newer graphics apis.
 Instead of loading complete images a streaming system could also load smaller parts of images (we will call it fine grained streaming). Enemy Territory: Quake Wars and Rage were the games which introduced this concept, using one giant texture (Rage supports texture sizes of up to 128000x128000) for a complete level, which can on disk be compressed using traditional image compression like JPEG. The geometry is then split in smaller blocks and the texturing system figures out which block needs which image data resolution.
-[rage tiles]
+![Rage Tiles](/wiki/images/rage-tiles.png)
 The toolset for artists usually looks the same as before though, because artists don’t create 128000x128000 textures by hand. But the tools can completely lift any restrictions about how many textures can be put on top of each other because into the end all of it will be converted to a single texture anyway. This also makes using tilemaps in 3D graphics possible without any further problems.
 
 ### Geometry
 As seen earlier geometry usually does take up only a fraction of image data – although geometry is rarely compressed. Also there is no hardware support for any form of geometry compression. But geometry animations are of course highly compressed using skeletal animation systems. And as with images the highest compression ratios are achieved by humans.
-[uncharted]
+![Uncharted](/wiki/images/uncharted.png)
 Repeated geometry can be hidden efficiently, especially with good texturing and lighting. One crude form of texture compression are height maps, only encoding y values on a predefined grid. But height maps are not really used to save on geometry data but because they can efficiently be tessellated in realtime, reducing the amount of vertices which have to be transformed in the vertex shader.
 Normal maps can also be seen as some form of geometry processing – detailed geometry is reduced and instead encoded in a texture – which can be further compressed using texture compression.
 Coarse geometry streaming also works the same way as for textures – objects are replaced depending on their distance from the camera. Fine grained geometry streaming however has not yet been done in games apart from using height maps which very much restrict the kind of geometry that can be encoded.
