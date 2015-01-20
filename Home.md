@@ -10,7 +10,8 @@
 7. [[Physically Based Rendering]]
 8. [[Physics1]]
 9. [[Physics2]]
-10. [[Procedural Content Generation]] 
+10. [[Procedural Content Generation]]
+11. [[Compression and Streaming]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
