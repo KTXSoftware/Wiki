@@ -36,6 +36,7 @@
 9. [(pptx)](/wiki/slides/gametech9.pptx) [(pdf)](/wiki/slides/gametech9.pdf)
 10. [(pptx)](/wiki/slides/gametech10.pptx) [(pdf)](/wiki/slides/gametech10.pdf) - Update 15.01.: Corrected gradient lookup function on slide 54
 11. [(pptx)](/wiki/slides/gametech11.pptx) [(pdf)](/wiki/slides/gametech11.pdf) - Update 16.01.: Now includes the slides about exercise 10
+12. [(pptx)](/wiki/slides/gametech12.pptx) [(pdf)](/wiki/slides/gametech12.pdf)
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
@@ -49,6 +50,7 @@
 [Exercise 9](/wiki/exercises/gametech-ex9.pdf) - [Video](/wiki/exercises/exercise9.mp4) - Update 13.12.: Please note the corrected position and size of the goal area's box
 [Exercise 10](/wiki/exercises/gametech-ex10.pdf) - For the reference examples, see the slides of the lecture | Update: The correct due date is the 16th of January
 [Exercise 11](/wiki/exercises/gametech-ex11.pdf)
+[Exercise 12](/wiki/exercises/gametech-ex12.pdf)
 
 ## Software
 ### Kore
