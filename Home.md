@@ -38,6 +38,7 @@
 10. [(pptx)](/wiki/slides/gametech10.pptx) [(pdf)](/wiki/slides/gametech10.pdf) - Update 15.01.: Corrected gradient lookup function on slide 54
 11. [(pptx)](/wiki/slides/gametech11.pptx) [(pdf)](/wiki/slides/gametech11.pdf) - Update 16.01.: Now includes the slides about exercise 10
 12. [(pptx)](/wiki/slides/gametech12.pptx) [(pdf)](/wiki/slides/gametech12.pdf)
+13. [(pptx)](/wiki/slides/gametech13.pptx) [(pdf)](/wiki/slides/gametech13.pdf)
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
@@ -52,6 +53,7 @@
 [Exercise 10](/wiki/exercises/gametech-ex10.pdf) - For the reference examples, see the slides of the lecture | Update: The correct due date is the 16th of January
 [Exercise 11](/wiki/exercises/gametech-ex11.pdf)
 [Exercise 12](/wiki/exercises/gametech-ex12.pdf)
+[Exercise 13](/wiki/exercises/gametech-ex13.pdf)
 
 ## Software
 ### Kore
