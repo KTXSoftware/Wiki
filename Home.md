@@ -13,6 +13,7 @@
 10. [[Procedural Content Generation]]
 11. [[Compression and Streaming]]
 12. [[Multiplayer]]
+13. [[Audio]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
