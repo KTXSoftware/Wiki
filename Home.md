@@ -14,6 +14,7 @@
 11. [[Compression and Streaming]]
 12. [[Multiplayer]]
 13. [[Audio]]
+14. [[Artificial Intelligence]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
@@ -40,6 +41,7 @@
 11. [(pptx)](/wiki/slides/gametech11.pptx) [(pdf)](/wiki/slides/gametech11.pdf) - Update 16.01.: Now includes the slides about exercise 10
 12. [(pptx)](/wiki/slides/gametech12.pptx) [(pdf)](/wiki/slides/gametech12.pdf)
 13. [(pptx)](/wiki/slides/gametech13.pptx) [(pdf)](/wiki/slides/gametech13.pdf)
+13. [(pptx)](/wiki/slides/gametech14.pptx) [(pdf)](/wiki/slides/gametech14.pdf) - Skipped slides included for those interested but marked as not relevant for the exam
 
 ### Exercises
 [Exercise 1](/wiki/exercises/gametech-ex1.pdf) - [Solution](/wiki/exercises/gametech-ex1_solution.pdf) - [buffertest.js](http://ktxsoftware.com/buffertest.js)
@@ -55,6 +57,7 @@
 [Exercise 11](/wiki/exercises/gametech-ex11.pdf)
 [Exercise 12](/wiki/exercises/gametech-ex12.pdf)
 [Exercise 13](/wiki/exercises/gametech-ex13.pdf)
+[Exercise 14] - Coming 6.2.2015, for impressions of the tasks, see the slides
 
 ## Software
 ### Kore
