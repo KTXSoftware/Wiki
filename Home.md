@@ -57,7 +57,7 @@
 [Exercise 11](/wiki/exercises/gametech-ex11.pdf)
 [Exercise 12](/wiki/exercises/gametech-ex12.pdf)
 [Exercise 13](/wiki/exercises/gametech-ex13.pdf)
-[Exercise 14] - Coming 6.2.2015, for impressions of the tasks, see the slides
+[Exercise 14](/wiki/exercises/gametech-ex14.pdf)
 
 ## Software
 ### Kore
