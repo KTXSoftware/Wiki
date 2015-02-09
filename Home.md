@@ -57,7 +57,7 @@
 [Exercise 11](/wiki/exercises/gametech-ex11.pdf)
 [Exercise 12](/wiki/exercises/gametech-ex12.pdf)
 [Exercise 13](/wiki/exercises/gametech-ex13.pdf)
-[Exercise 14](/wiki/exercises/gametech-ex14.pdf)
+[Exercise 14](/wiki/exercises/gametech-ex14.pdf) - If you are using Visual Studio 2013, please install this update: http://www.visualstudio.com/en-us/news/vs2013-update4-rtm-vs.aspx. See also https://www.fachschaft.informatik.tu-darmstadt.de/forum/viewtopic.php?f=557&t=31538
 
 ## Software
 ### Kore
