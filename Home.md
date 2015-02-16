@@ -14,8 +14,8 @@
 11. [[Compression and Streaming]]
 12. [[Multiplayer]]
 13. [[Audio]]
-14. [[Artificial Intelligence]]
-15. [[Scripting]]
+14. [[Artificial Intelligence]] Remaining sections coming 18.2.2015
+15. [[Scripting]] - Optional - Coming 23.2.2015
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
