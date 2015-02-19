@@ -135,5 +135,74 @@ This can be done by defining clusters of nodes and computing the paths between t
 ### Movement planning
 A specialized way of pathfinding can be used when the character have a limited set of animations that need to be played for a certain movement speed. In this case, we could use an A* variant that can handle infinite graphs, and consider at each node the possible animations that we could play from this node. In this way, a sequence of moves is found that lead from one position to another.
 
-### Remaining sections
-coming 18.2.2015
+## Decision Making
+In order to know where to move to, an AI needs to decide on what to do. Besides the movement system, this can involve other systems as well, such as playing certain animations or triggering other actions in the game world.
+
+Several methods for decision making are common in games. The end result is usually a state in which the AI is. This state is often realized as a function that is periodically called and in which the AI carries out the actions associated with the state. For example, a "chase player" state might turn the AI towards the player and accelerate it in that direction.
+
+One thing to prevent for all decision making methods is oscillation between states. For example, when an AI is close to a distance at which it will switch states, it can make sense to add hysteresis, so that it can not be stuck between the two states. Furthermore, when random decisions are made, it is important to make sure that the AI will not switch to another state whenever its update function is called.
+
+### Decision trees
+A decision tree has the states of the AI as the leaves and decisions as the intermediate nodes. As the tree is traversed, conditions are checked, such as "is distance to player < x". The tree is usually designed based on the game design or can be learned using machine learning.
+
+A good rule of thumb for efficiency is to place computation-heavy decisions lower in the tree, so they are called less frequently.
+
+### State machines
+The most common mechanism for decision making is games are finite state machines. Here, states can be freely connected with other states. A transition to another state is triggered when the conditions for it are met.
+
+The state machine will usually be created by a designer, and specialized graphical tools assist with creating it.
+
+An important evolution in state machines are hierarchical state machines. Here, several state machines are used to describe the state of an AI, and the active state can switch from one to the other. One example where this can help with keeping the state machines usable is when an AI should have some kind of "alarm" state that overrides all other states. Without hierarchical state machines, this "alarm" state would have to be reachable from all other states. If a second FSM is used, we can instead define the alarm state in terms of this second state machine.
+
+### Behaviour trees
+Behaviour trees at first look similar to decision trees. Differences are that instead of states, behaviour trees manage tasks at their leaves. Furthermore, the intermediate nodes are not only decisions, but can also indicate sequences of tasks, repetitions of tasks or random choices.
+
+### Fuzzy logic
+Fuzzy logic is sometimes used in game AI. It is well suited for problems where decisions are not clear-cut but vague instead. For example, how much health of a character leads to it being "injured"? Fuzzy logic does not deal with such absolute attributes or set memberships. Instead, an object such as the AI has a set membership with an associated value between 0 and 1. So, a character might be a member of the "injured" set with a degree of membership of 0.7, which is more injured than a character with a value of 0.3.
+
+"Fuzzyfication" then refers to turning a piece of game data into a fuzzy degree of membership, and "defuzzyfication" to the reverse process.
+
+For fuzzy logic, the equivalents of the usual Boolean logic operators are defined in terms of equations on the associated degrees of membership, using combinations of min, max and subtraction operators. For example, "NOT A" is equal to 1 - a, and "A AND B" is equal to min(a, b), where a and b define the degrees of membership of A and B.
+
+Based on these operators, we can define rules of inflection to find degrees of membership for new sets. For example in a driving game, if A defines the proximity to a corner and B the velocity of the car, then we might want to have a degree of membership for C, indicating that we should brake. The associated formula then is c = min(a, b).
+
+If we have several formulas of this type (i.e. several rules which give different values for c), then we compute each rule individually and then take the minimum over all results.
+
+### Goal-oriented behaviour
+Many game characters can be seen as entities that want to fulfill a set of goals (motives/"insistence"). For example, the Sims do not want to be hungry, be happy, ... To reach these goals, characters have a set of actions. These actions typically depend on the game state (for example, if the character has no money, it can not buy food). They change the game state, for example decreasing hunger at the expense of money.
+
+An AI can make decisions based on the goals it has and the available actions. The most simple way to choose an action is to choose the current optimum and not look ahead at the future. This will, however, not lead to longer strategies, meaning that the AI might not reach a global optimum. For example, it might be better to stay hungry for a while and then getting good food instead of snacking all the time.
+
+Systems can add a value for the overall utility to the results of an action, indicating that some actions have a long-term positive or negative effect. Similarly, the time required for actions can be added, if timing is of the essence. However, these methods still do not look ahead more than one step, and therefore will not behave with a plan.
+
+This can be achieved with goal-oriented action planning (GOAP), where instead of a single action, a sequence of actions is examined, and the state of the hypothetical future is taken into account. Such a system can be implemented with a variant of A* that can handle graphs with unknown or infinite size. However, even such a system might be unable to find a global optimum: if we look ahead 10 moves, but the optimal solution involves 10 "bad" steps and one final step which turns the whole situation around, we would not find it.
+
+### Blackboard architectures
+Blackboard architectures are ways in which AI components can communicate with each other. Similar to a regular blackboard, a set of data is written to it, and others can read from it or change the data that is there. One advantage is that cohesion between components is reduced: new components can be added without explicitly adding code for handling the existing components. Furthermore, a decision making method can be built from such an architecture: each component gives an estimation upon being polled how well it can handle the current situation. Then, the component with the highest estimation gets control over the character.
+
+## Tactical and strategical AI
+One level further up from decision making, systems for tactical and strategical AI are concerned with providing global information to AIs or with synchronizing the actions of several AIs.
+
+An example are waypoint tactics, where waypoints for AIs are not only checked for being reachable, but also for their tactical value, such as whether there is cover at the waypoint. AIs which are planning an action can use this information in their decision making process.
+
+Similarly, a tactical AI can analyze the game map and give an estimation of values such as the level of control of a player over a certain region, the danger associated with a region or other similar values. Such maps can be learned, for example by keeping track of where units have been destroyed ("frag maps"), or can be derived from the game state. The latter can be done for example by plotting on a map all the positions of units, and then adding values to adjacent cells/pixels based on the distance. This kind of map can also be reached by applying a blur filter.
+
+## Execution management
+AI tasks have to be executed along with the other tasks of the game engine. For movement and decision making, the AI should regularly be polled. Furthermore, some tasks are created depending on the game state, such as a pathfinding operation for a character.
+
+For each AI task, a frequency (how often should it be called?) and a phase can be defined. The phase defines the offset of the periodic call to a later frame. Using a good phasing, several tasks can be spread out over several frames instead of always slowing down every N'th frame.
+
+Several methods for building a good scheduler exist. One method is "Wright's method", where we simulate ahead the next frames and count the number of tasks that will be run in each frame. Then, the frame with the lowest number of tasks is found. If all tasks before have been added in this fashion, it is propable that this frame is a good candidate to add the task.
+
+### Interruptible tasks and anytime algorithms
+Since AI tasks often do not need to give an answer or result in something visible each frame (as compared to many graphical tasks), we can use algorithms that can be interrupted. For example, A* can typically be interrupted and continue at a later point. In this way, the pathfinding can be spread out over several frames.
+
+A special class of algorithms in this regard are Anytime algorithms, which are built with the intent of being interruptible, and at the same time being able to quickly give an approximation of the optimal answer. The more time they are given, the better the solution will be. An anytime A* variant might be able to produce a valid path very quickly, and then improve the path when it is called again. Compare this to a regular A* implementation, which will not provide a valid path until the computation is complete, and then will not be able to improve it with more time.
+
+
+
+
+
+
+
+
