@@ -15,7 +15,7 @@
 12. [[Multiplayer]]
 13. [[Audio]]
 14. [[Artificial Intelligence]]
-15. [[Scripting]] - Optional - Coming 23.2.2015
+15. [[Scripting]]
 
 #### Programming Script
 1. [[C++ Introduction for Java Programmers]]
