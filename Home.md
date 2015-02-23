@@ -61,6 +61,24 @@
 [Exercise 13](/wiki/exercises/gametech-ex13.pdf)
 [Exercise 14](/wiki/exercises/gametech-ex14.pdf) - If you are using Visual Studio 2013, please install this update: http://www.visualstudio.com/en-us/news/vs2013-update4-rtm-vs.aspx. See also https://www.fachschaft.informatik.tu-darmstadt.de/forum/viewtopic.php?f=557&t=31538
 
+### Example Problems
+The following documents contain the most relevant topics for each lecture and a set of example problems for the exam. Remaining documents will be uploaded in the next days. Note that if no problem for a topic is included, there can still be one in the final exam.
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10. [(Procedural Content Generation)](/wiki/examples/examples10.pdf)
+11.
+12.
+13.
+14.
+15.
+
 ## Software
 ### Kore
 [[Getting Started with Kore]]
