@@ -63,21 +63,21 @@
 
 ### Example Problems
 The following documents contain the most relevant topics for each lecture and a set of example problems for the exam. Remaining documents will be uploaded in the next days. Note that if no problem for a topic is included, there can still be one in the final exam.
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10. [(Procedural Content Generation)](/wiki/examples/examples10.pdf)
-11.
-12.
-13.
-14.
-15.
+1. Will soon be uploaded
+2. Will soon be uploaded
+3. Will soon be uploaded
+4. Will soon be uploaded
+5. Will soon be uploaded
+6. Will soon be uploaded
+7. Will soon be uploaded
+8. Will soon be uploaded
+9. Will soon be uploaded
+10. [Procedural Content Generation](/wiki/examples/examples10.pdf)
+11. Will soon be uploaded
+12. Will soon be uploaded
+13. Will soon be uploaded
+14. Will soon be uploaded
+15. Will soon be uploaded
 
 ## Software
 ### Kore
