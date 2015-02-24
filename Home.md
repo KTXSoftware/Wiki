@@ -70,7 +70,7 @@ The following documents contain the most relevant topics for each lecture and a 
 5. Will soon be uploaded
 6. Will soon be uploaded
 7. Will soon be uploaded
-8. Will soon be uploaded
+8. [Physics 1](/wiki/examples/examples8.pdf)
 9. Will soon be uploaded
 10. [Procedural Content Generation](/wiki/examples/examples10.pdf)
 11. Will soon be uploaded
