@@ -76,8 +76,8 @@ The following documents contain the most relevant topics for each lecture and a 
 11. Will soon be uploaded
 12. Will soon be uploaded
 13. Will soon be uploaded
-14. Will soon be uploaded
-15. Will soon be uploaded
+14. [Artificial Intelligence](/wiki/examples/examples14.pdf)
+
 
 ## Software
 ### Kore
