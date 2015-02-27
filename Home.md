@@ -73,9 +73,9 @@ The following documents contain the most relevant topics for each lecture and a 
 8. [Physics 1](/wiki/examples/examples8.pdf)
 9. [Physics 2](/wiki/examples/examples9.pdf)
 10. [Procedural Content Generation](/wiki/examples/examples10.pdf)
-11. Will soon be uploaded
-12. Will soon be uploaded
-13. Will soon be uploaded
+11. [Compression and Streaming](/wiki/examples/examples11.pdf)
+12. [Multiplayer](/wiki/examples/examples12.pdf)
+13. [Audio](/wiki/examples/examples13.pdf)
 14. [Artificial Intelligence](/wiki/examples/examples14.pdf)
 
 
