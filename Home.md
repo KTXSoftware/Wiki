@@ -63,11 +63,11 @@
 
 ### Example Problems
 The following documents contain the most relevant topics for each lecture and a set of example problems for the exam. Remaining documents will be uploaded in the next days. Note that if no problem for a topic is included, there can still be one in the final exam.
-1. Will soon be uploaded
-2. Will soon be uploaded
-3. Will soon be uploaded
-4. Will soon be uploaded
-5. Will soon be uploaded
+1. [Input and Output](/wiki/examples/examples1.pdf)
+2. [The Game Loop](/wiki/examples/examples2.pdf)
+3. [Software Rendering](/wiki/examples/examples3.pdf)
+4. [Advanced Software Rendering](/wiki/examples/examples4.pdf)
+5. [Basic Hardware Rendering](/wiki/examples/examples5.pdf)
 6. Will soon be uploaded
 7. Will soon be uploaded
 8. [Physics 1](/wiki/examples/examples8.pdf)
