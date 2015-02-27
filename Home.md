@@ -68,8 +68,8 @@ The following documents contain the most relevant topics for each lecture and a 
 3. [Software Rendering](/wiki/examples/examples3.pdf)
 4. [Advanced Software Rendering](/wiki/examples/examples4.pdf)
 5. [Basic Hardware Rendering](/wiki/examples/examples5.pdf)
-6. Will soon be uploaded
-7. Will soon be uploaded
+6. [Bumps and Animations](/wiki/examples/examples6.pdf)
+7. [Physically Based Rendering](/wiki/examples/examples7.pdf)
 8. [Physics 1](/wiki/examples/examples8.pdf)
 9. [Physics 2](/wiki/examples/examples9.pdf)
 10. [Procedural Content Generation](/wiki/examples/examples10.pdf)
