@@ -53,7 +53,7 @@
 [Exercise 5](/wiki/exercises/gametech-ex5.pdf) - [Solution](/wiki/exercises/gametech-ex5_solution.pdf)
 [Exercise 6](/wiki/exercises/gametech-ex6.pdf) - [Solution](/wiki/exercises/gametech-ex6_solution.pdf) - [Video](/wiki/exercises/exercise6.mp4) - [Programming Solution](https://github.com/KTXSoftware/Exercise6-Solution.git)
 [Exercise 7](/wiki/exercises/gametech-ex7.pdf) - [Solution](/wiki/exercises/gametech-ex7_solution.pdf) - [Images](Exercise-7-Images) - [Programming Solution](https://github.com/KTXSoftware/Exercise7-Solution.git)
-[Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Video](/wiki/exercises/exercise8.mp4)
+[Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Solution](/wiki/exercises/gametech-ex8_solution.pdf) - [Video](/wiki/exercises/exercise8.mp4)
 [Exercise 9](/wiki/exercises/gametech-ex9.pdf) - [Video](/wiki/exercises/exercise9.mp4) - Update 13.12.: Please note the corrected position and size of the goal area's box
 [Exercise 10](/wiki/exercises/gametech-ex10.pdf) - For the reference examples, see the slides of the lecture | Update: The correct due date is the 16th of January
 [Exercise 11](/wiki/exercises/gametech-ex11.pdf) - [Solution](/wiki/exercises/gametech-ex11_solution.pdf)
