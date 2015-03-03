@@ -56,7 +56,7 @@
 [Exercise 8](/wiki/exercises/gametech-ex8.pdf) - [Video](/wiki/exercises/exercise8.mp4)
 [Exercise 9](/wiki/exercises/gametech-ex9.pdf) - [Video](/wiki/exercises/exercise9.mp4) - Update 13.12.: Please note the corrected position and size of the goal area's box
 [Exercise 10](/wiki/exercises/gametech-ex10.pdf) - For the reference examples, see the slides of the lecture | Update: The correct due date is the 16th of January
-[Exercise 11](/wiki/exercises/gametech-ex11.pdf)
+[Exercise 11](/wiki/exercises/gametech-ex11.pdf) - [Solution](/wiki/exercises/gametech-ex11_solution.pdf)
 [Exercise 12](/wiki/exercises/gametech-ex12.pdf)
 [Exercise 13](/wiki/exercises/gametech-ex13.pdf)
 [Exercise 14](/wiki/exercises/gametech-ex14.pdf) - If you are using Visual Studio 2013, please install this update: http://www.visualstudio.com/en-us/news/vs2013-update4-rtm-vs.aspx. See also https://www.fachschaft.informatik.tu-darmstadt.de/forum/viewtopic.php?f=557&t=31538
