@@ -1,3 +1,19 @@
+## Software
+### Kha
+Kha is a complete and super portable software development platform based on the Haxe programming language.
+* [[Getting Started]]
+* [[Tools]]
+* [[project.kha]]
+* [[Api]]
+* [[Api remarks]]
+* [[Community]]
+
+### Kore
+[[Getting Started with Kore]]
+
+### Git
+[[Getting Started with Git]]
+
 ## Lectures
 ### Game Technology
 #### Theory Script
@@ -77,11 +93,3 @@ The following documents contain the most relevant topics for each lecture and a 
 12. [Multiplayer](/wiki/examples/examples12.pdf)
 13. [Audio](/wiki/examples/examples13.pdf)
 14. [Artificial Intelligence](/wiki/examples/examples14.pdf)
-
-
-## Software
-### Kore
-[[Getting Started with Kore]]
-
-### Git
-[[Getting Started with Git]]
